@@ -106,11 +106,11 @@ namespace PhotoGallery.Infrastructure
                     DateCreated = DateTime.Now
                 });
 
-                // create user-admin for chsakell
+                // create user-admin for jsmith
                 context.UserRoles.AddRange(new UserRole[] {
                 new UserRole() {
                     RoleId = 1, // admin
-                    UserId = 1  // chsakell
+                    UserId = 1  // jsmith
                 }
             });
                 context.SaveChanges();
