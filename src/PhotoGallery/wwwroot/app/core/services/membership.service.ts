@@ -4,6 +4,7 @@ import { DataService } from './data.service';
 import { Registration } from '../domain/registration';
 import { User } from '../domain/user';
 
+
 @Injectable()
 export class MembershipService {
     private _accountRegisterAPI: string = 'api/account/register/';
@@ -28,7 +29,7 @@ export class MembershipService {
     }
 
     isUserAuthenticated(): boolean {
-        var _user: User = localStorage.getItem('user');
+        var _user: User = JSON.parse(localStorage.getItem('user'));
         if (_user != null)
             return true;
         else

@@ -10,6 +10,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var http_1 = require('@angular/http');
 var core_1 = require('@angular/core');
+//import {Observable} from '../../Observable';
+require('rxjs/add/operator/map');
 var DataService = (function () {
     function DataService(http) {
         this.http = http;
@@ -46,4 +48,4 @@ var DataService = (function () {
     return DataService;
 }());
 exports.DataService = DataService;
-//# sourceMappingURL=data.services.js.map
+//# sourceMappingURL=data.service.js.map
