@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 public class PaginationSet<T>
 {
     public int Page { get; set; }
@@ -5,7 +8,7 @@ public class PaginationSet<T>
     {
         get
         {
-            return (null != this.Items) ? this.Items.Count() : 0         
+            return (null != this.Items) ? this.Items.Count() : 0;      
         }
     }
 

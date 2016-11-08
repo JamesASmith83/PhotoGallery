@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PhotoGallery.Entities;
 using PhotoGallery.Infrastructure.Core;
-using PhotoGallery.Infrastructure.Repositories.Abstract;
+using PhotoGallery.Infrastructure.Repositories;
 using PhotoGallery.Infrastructure.Services.Abstract;
 using PhotoGallery.ViewModels;
 using System;

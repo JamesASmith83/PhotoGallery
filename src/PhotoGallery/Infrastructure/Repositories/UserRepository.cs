@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using PhotoGallery.Entities;
-using PhotoGallery.Infrastructure.Repositories.Abstract;
+using PhotoGallery.Infrastructure.Repositories;
 
 namespace PhotoGallery.Infrastructure.Repositories
 {

@@ -1,7 +1,7 @@
 ﻿using PhotoGallery.Entities;
 using System.Collections.Generic;
 
-namespace PhotoGallery.Infrastructure.Repositories.Abstract
+namespace PhotoGallery.Infrastructure.Repositories
 {
     public interface IAlbumRepository : IEntityBaseRepository<Album> { }
 

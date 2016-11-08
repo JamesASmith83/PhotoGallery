@@ -1,3 +1,8 @@
+using AutoMapper;
+using PhotoGallery.Entities;
+using PhotoGallery.ViewModels;
+using System.Linq;
+
 public class DomainToViewModelMappingProfile : Profile
 {
     protected override void Configure()

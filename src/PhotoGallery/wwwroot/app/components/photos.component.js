@@ -23,7 +23,7 @@ var PhotosComponent = (function (_super) {
         this.photosService = photosService;
         this._photosAPI = 'api/photos';
     }
-    PhotosComponent.prototype.ngInit = function () {
+    PhotosComponent.prototype.ngOnInit = function () {
         this.photosService.set(this._photosAPI, 12);
         this.getPhotos();
     };

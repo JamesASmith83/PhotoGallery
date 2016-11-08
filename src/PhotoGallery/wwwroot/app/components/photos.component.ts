@@ -15,7 +15,7 @@ export class PhotosComponent extends Paginated implements OnInit{
         super(0,0,0);
     }
 
-    ngInit(){
+    ngOnInit(){
         this.photosService.set(this._photosAPI, 12);
         this.getPhotos();
     }

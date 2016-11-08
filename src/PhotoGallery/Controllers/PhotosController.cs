@@ -1,3 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using PhotoGallery.Entities;
+using PhotoGallery.ViewModels;
+using AutoMapper;
+using PhotoGallery.Infrastructure.Repositories;
+using PhotoGallery.Infrastructure.Core;
+
 [Route("api/[controller]")]
 public class PhotosController : Controller
 {
@@ -30,23 +41,23 @@ public class PhotosController : Controller
             .Take(currentPageSize)
             .ToList();
 
-_totalPhotos = _photoRepository.GetAll().Count();
+            _totalPhotos = _photoRepository.GetAll().Count();
 
-IEnumerable<PhotoViewModel> _photosVM = Mapper.Map<IEnumerable<Photo>, IEnumerable<PhotoViewModel>>(_photos);
+            IEnumerable<PhotoViewModel> _photosVM = Mapper.Map<IEnumerable<Photo>, IEnumerable<PhotoViewModel>>(_photos);
 
-pageSet = new PaginationSet<PhotoViewModel>()
-{
-    Page = currentPage,
-    TotalCount = _totalPhotos,
-    TotalPages = (int)Math.Ceiling((decimal)_totalPhotos / currentPageSize),
-    Items = _photosVM
-};
- }
- catch(Exception ex)
- {
-     _loggingRepository.Add(new Error() { Message = ex.Message, StackTrace = ex.StackTrace, DateCreated = DateTime.Now });
-     _loggingRepository.Commit();
- }
+            pagedSet = new PaginationSet<PhotoViewModel>()
+            {
+                Page = currentPage,
+                TotalCount = _totalPhotos,
+                TotalPages = (int)Math.Ceiling((decimal)_totalPhotos / currentPageSize),
+                Items = _photosVM
+            };
+        }
+        catch (Exception ex)
+        {
+            _loggingRepository.Add(new Error() { Message = ex.Message, StackTrace = ex.StackTrace, DateCreated = DateTime.Now });
+            _loggingRepository.Commit();
+        }
 
  return pagedSet;
     }

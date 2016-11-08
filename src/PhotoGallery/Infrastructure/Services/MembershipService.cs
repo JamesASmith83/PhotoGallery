@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using PhotoGallery.Entities;
 using PhotoGallery.Infrastructure.Services.Abstract;
-using PhotoGallery.Infrastructure.Repositories.Abstract;
+using PhotoGallery.Infrastructure.Repositories;
 using PhotoGallery.Infrastructure.Core;
 using System.Security.Principal;
 using System.Linq;

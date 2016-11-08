@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace PhotoGallery.Infrastructure.Repositories.Abstract
+namespace PhotoGallery.Infrastructure.Repositories
 {
     public interface IEntityBaseRepository<T> where T : class, IEntityBase, new()
     {

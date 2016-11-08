@@ -1,3 +1,5 @@
+using AutoMapper;
+
 public class AutoMapperConfiguration 
 {
     public static void Configure()
