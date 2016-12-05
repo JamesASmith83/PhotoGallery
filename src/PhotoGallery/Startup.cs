@@ -100,7 +100,7 @@ namespace PhotoGallery
             _fileServerOptions.EnableDirectoryBrowsing = true;
             app.UseFileServer(_fileServerOptions);
 
-            //AutoMapperConfiguration.Configure();
+            AutoMapperConfiguration.Configure();
 
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
