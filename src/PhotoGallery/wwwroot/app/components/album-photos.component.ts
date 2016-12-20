@@ -22,6 +22,7 @@ export class AlbumPhotosComponent extends Paginated implements OnInit {
     private _albumTitle: string;
     private sub: Subscription;
 
+
     constructor(public dataService: DataService,
                 public utilityService: UtilityService,
                 public notificationService: NotificationService,
