@@ -7,4 +7,4 @@ var OperationResult = (function () {
     return OperationResult;
 }());
 exports.OperationResult = OperationResult;
-//# sourceMappingURL=operationResults.js.map
+//# sourceMappingURL=operationResult.js.map
