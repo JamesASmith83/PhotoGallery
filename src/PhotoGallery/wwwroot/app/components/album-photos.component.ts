@@ -6,7 +6,7 @@ import { DataService } from '../core/services/data.service';
 import { UtilityService } from '../core/services/utility.service';
 import { NotificationService } from '../core/services/notification.service';
 import { OperationResult } from '../core/domain/operationResult';
-import { Subscription } from '../rxjs/Subscription';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
     selector: 'album-photo',

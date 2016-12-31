@@ -4,8 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home.component';
 import { PhotosComponent } from './components/photos.component';
 import { AlbumsComponent } from './components/albums.component';
-import { AlbumsPhotosComponent } from './components/album-photos.component';
-import { accountRoutes, accountRouting } from './components/accounts/routes';
+import { AlbumPhotosComponent } from './components/album-photos.component';
+import { accountRoutes, accountRouting } from './components/account/routes';
 
 const appRoutes: Routes = [
     {
@@ -27,7 +27,7 @@ const appRoutes: Routes = [
     },
     {
         path: 'albums/:id/photos',
-        component: AlbumsPhotosComponent
+        component: AlbumPhotosComponent
     }
 ];
 
